@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Norberto Anguiano</title>
+        <link rel="icon" type="image/favic" href="favicon.png.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+    <body class="homepage">
+        <header class="nav">
+            <div class="icon">
+                <div class="hamburger"></div>
+            </div>
+            <div class="menu-mobile">
+                <a class="nav" href="#startpage">Home</a>
+                <a class="nav" href="#aboutme">About</a>
+                <a class="nav" href="#projectspage">Portfolio</a>
+                <a class="nav" href="#contactpage">Contact</a>
+            </div>
+        </header>
+        <header class="desktop">
+            <div class="menu-desktop">
+                <a href="#startpage">Home</a>
+                <a href="#aboutme">About</a>
+                <a href="#projectspage">Portfolio</a>
+                <a href="#contactpage">Contact</a>
+            </div>
+        </header>
+        <main>
+            <section class="startpage" id="startpage">
+                <div class="container home">
+                    <div class="profileimg">
+                    </div>
+                    <div class="intro">
+                        <h1>Whats up!,<br> I go by Tito. </h1>
+                        <p class="startp">I'm in pursuit of becoming a fullstack developer. </p>
+                    </div>
+                </div>
+                <a href="#aboutme" class="arrow bounce" title="bouncing arrow"></a>
+            </section>
+            <section class="aboutme" id="aboutme">
+                <div class="container aboutmec">
+                    <h2>About Me</h2>
+                    <p> I enjoy Web development because I love creating clean, beautiful and intuitive designs.
+                        Sharing ideas and giving feedback with others helps make projects engaging  and exciting. 
+                        When I am not coding, I am most likely pc gaming, skateboarding, doing digital art, or reading the Bible. 
+                    </p>
+                </div>
+            </section>
+
+            <section id="projectspage" class="projectspage">
+                <h2 class='featured'>Portfolio</h2>
+                <div class="cards">
+                    <!-- start card -->
+                    <div class="card">
+                        <a href="https://anguianoo.github.io/mathQuiz/" target="_blank"><img class='quizappimg' src="/IMG/question-page.png" alt="screenshot of quizapp"></a>
+                        <div>
+                            <p><a href="https://anguianoo.github.io/mathQuiz/" target="_blank" class="fade">Quiz App</a></p>
+                            <p> I created this project to challenge my jquery skills. This project is a simple quiz app I made through Thinkful. It was to be 5 questions long, and have a score/question section.<br>
+                                I click on the box that displays the correct answer. Based on the selection, the quiz will tell me if the answer chosen is correct or not.</p>
+                            <p>HTML| CSS | JavaScript & jQuery</p>
+                            <p class="repo"><a href="https://github.com/anguianoo/mathQuiz" target="_blank">Click here to view repo</a></p>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+            </section>
+            <footer id="contactpage" class="contactpage">
+                <h3>Contact Me</h3>
+                <div class="icons">
+                    <div>
+                        <a href="mailto:njanguiano@gmail.com" target="_blank"><img src="IMG/e.png" class='email' alt="email image"/></a>
+                        <p class="iconsp">Email</p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/anguianoo" target="_blank"><img src="/IMG/githubBlack.png" class="email" alt="github image" /></a>
+                        <p class="iconsp">Github</p>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/norberto-anguiano-a45500a9/" target="_blank"><img src="/IMG/linkedIn.png" class="email" alt='linkedin image'/></a>
+                        <p class="iconsp">Linkedin</p>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="app.js"></script>
+        </main>
+    </body>
+
+</html>

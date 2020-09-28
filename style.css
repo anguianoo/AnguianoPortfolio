@@ -1,0 +1,538 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: brandon-grotesque, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #000000;
+}
+
+
+
+/* portfolio image */
+.profileimg {
+    /* border: black solid 3px; */
+    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+    background-image: url(IMG/picture-of-me.jpg);
+    
+}
+
+/*Mobile Header and Menu*/
+.nav, .desktop {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 900;
+}
+
+.icon {
+    position: fixed;
+    cursor: pointer;
+    top: 5%;
+    right: 0%;
+    width: 40px;
+    height: 45px;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1000;
+}
+
+.hamburger {
+    width: 40px;
+    height: 4px;
+    line-height: 70px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+
+.hamburger:before {
+    top: -10px;
+}
+
+.hamburger:after {
+    top: 10px;
+}
+
+.icon.active .hamburger {
+    background: rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0);
+}
+
+.icon.active .hamburger:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.menu-mobile {
+    background-color: #396361;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding-top: 150px;
+    text-transform: uppercase;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+    letter-spacing: .4em;
+}
+
+.menu-mobile, .menu-mobile a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.menu-mobile a {
+    clear: right;
+    text-decoration: none;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+}
+
+.menu-mobile.a:hover{
+    box-shadow: 10px 10px 21px -1px rgba(0,0,0,0.75);
+}
+/* END OF Mobile Menu */
+
+/* start page */
+.startpage {
+    background-image: url('/IMG/water.jpg');
+    box-shadow: inset 0 0 0 2000px  rgba(57,99,97, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    background-color: silver;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN header*/
+h1 {
+    font-size: 30px;
+    text-align: left;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: .1em;
+    color:rgb(255,236,233);
+}
+
+/* all headers */
+h2 {
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-decoration: underline;
+    color: rgb(57,99,97);
+    text-shadow:2px 2px rgba(57,99,97, 0.5);
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    font-family:sans-serif;
+    text-align: center;
+    letter-spacing: .4em;
+}
+
+/* all of paragraphs */
+p {
+    font-size: 16px;
+    text-align: center;
+    color:black;
+}
+
+.aboutmec p {
+    padding: 10px;
+}
+
+/* header paragraph */
+.startp {
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: left;
+}
+
+/* home/startpage */
+.home {
+    min-height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 60px;
+}
+
+/* headline in home page */
+.intro {
+    padding: 50px;
+    margin-top:20px;
+    background-color: rgba(0,0,0, .3);
+    border-radius: 20px;
+}
+
+
+/* home, aboutme containers */
+.container {
+    margin: 50px;
+}
+
+/* arrow bounce function */
+.arrow {
+    position: absolute;
+    bottom: 5%;
+    width: 40px;
+    height: 40px;
+    background-image: url(IMG/downarrow.jpg);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.bounce {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 0.5s infinite linear;
+    -o-animation: bounce 0.5s infinite linear;
+    -webkit-animation: bounce 0.5s infinite linear;
+    animation: bounce 0.5s infinite linear;
+    color:000;
+}
+
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+/* aboutme page */
+.aboutme {
+    background-color:#fef6c9;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* container around aboutme paragraph */
+.aboutmec {
+    background-color:white;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 21px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 21px -1px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px -1px rgba(0,0,0,0.75);
+}
+
+
+/* portfolio page */
+.projectspage {
+    background-color:#D4DFC7;
+    color: black;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* title for portfolio */
+.featured {
+    padding-bottom: 50px;
+    text-decoration: underline;
+}
+
+.fade {
+    text-decoration: none;
+}
+
+/* repo link on projects page */
+.repo {
+    font-size: 15px;
+}
+
+/* project page cards you can add more later */
+.cards {
+    display: flex;
+    flex-direction:column;
+}
+
+.card {
+    display:flex;
+    flex-direction:column;
+    margin:30px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.8);
+}
+
+
+/* quizimg */
+.quizappimg {
+    margin: 0 auto;
+    max-width: 300px;
+    display:flex;
+}
+
+/* footer */
+footer {
+    color: white; 
+    background-color:#96C0B7;
+    background-size: 100%;
+    background-repeat: repeat;
+    height: 40vh;
+    padding-top: 50px;
+}
+
+/* footer icons */
+.icons {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.iconsp {
+    color:white;
+}
+
+.email {
+    height: 50px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+   
+    border-radius: 100px;
+    background-color: transparent;
+}
+.email:hover{
+    box-shadow: 10px 10px 21px -1px rgba(0,0,0,0.75);
+}
+
+.email:hover, .email:focus, .email:active {
+    transform: scale(1.5);
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .desktop, .menu-desktop, .menu-mobile {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .profileimg {
+        height: 300px;
+        width: 300px;
+    }
+
+    .startp {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .intro {
+        padding: 50px;
+
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .card p {
+        padding: 40px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    .icons {
+        padding-top: 50px;
+    }
+
+    .email {
+        height: 60px;
+    }
+
+    /* START of desktop menu for 768 media query */
+    header.nav, .menu-mobile {
+        display: none;
+    }
+
+    
+    .menu-desktop {
+        width: 100%;
+        padding: 0;
+        line-height: 50px;
+        background-color: #396361;
+        justify-content: space-evenly;
+        flex-direction: row;
+        height: 0;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-transform: uppercase;
+        letter-spacing: .4em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .menu-desktop a {
+        display: inline-flex;
+        margin-right: 30px;
+        height: 0;
+        line-height: 50px;
+        text-decoration: none;
+        color: #fff;
+        justify-content: space-evenly;
+        font-size: .75rem;
+
+    .desktop {
+            background-color: #396361;
+            opacity: .75;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            display: none;
+    }
+    }
+/* END of desktop menu for 768 media query */
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        margin: auto;
+    } 
+
+    .submit {
+        flex-direction: row;
+    }
+
+    .quizappimg{
+        max-width: 500px;
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 55px;
+    }
+
+    .startp {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .aboutmec {
+        margin: 100px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size:35px;
+    }
+
+    a {
+        font-size: 25px;
+    }
+
+    .menu-desktop {
+        font-size: 40px;
+    }
+}
