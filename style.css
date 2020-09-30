@@ -137,7 +137,7 @@ a:hover {
 
 /* start page */
 .startpage {
-    background-image: url('IMG/water.jpg');
+    background-image: url(IMG/water.jpg);
     box-shadow: inset 0 0 0 2000px  rgba(57,99,97, 0.3);
     background-repeat: no-repeat;
     background-size: cover;
